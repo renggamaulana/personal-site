@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Blog;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +19,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/blog', function () {
-    return view('blog', [
-        'title' => 'Blog'
+Route::get('/blogs', function () {
+    return view('blogs', [
+        'title' => 'Blogs',
+        'blogs' => Blog::all()
     ]);
 });
 
