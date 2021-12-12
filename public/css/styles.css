@@ -5,3 +5,13 @@ body {
 .navbar {
     background: linear-gradient(to right, khaki, lightblue);
 }
+p {
+    font-size: 1.5rem;
+    margin-top: 50px;
+}
+
+.post-body {
+    font-size: 1.3rem;
+    line-height: 175%;
+    color: rgb(30, 30, 30);
+}

@@ -31,3 +31,10 @@ Route::get('/about', function () {
         'title' => 'About'
     ]);
 });
+
+Route::get('/blog', function () {
+    return view('blog', [
+        'title' => 'Blog',
+        'blogs' => Blog::all()
+    ]);
+});
