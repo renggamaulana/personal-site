@@ -14,7 +14,7 @@
 </div>
 <div class="row justify-content-center align-items-center">
     <div class="col offset-5 mt-4">
-        <button class="btn btn-primary">Let's Collab!</button>
+        <a href="/about" class="btn btn-primary">About Me</a>
     </div>
 </div>
 </section>
