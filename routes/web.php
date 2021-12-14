@@ -1,7 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,22 +23,15 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/blogs', function () {
-    return view('blogs', [
-        'title' => 'Blogs',
-        'blogs' => Blog::all()
-    ]);
-});
-
 Route::get('/about', function () {
     return view('about', [
         'title' => 'About'
     ]);
 });
 
-Route::get('/blog', function () {
-    return view('blog', [
-        'title' => 'Blog',
-        'blogs' => Blog::all()
-    ]);
-});
+Route::get('/blogs', [BlogController::class, 'index']);
+Route::get('/blog', [BlogController::class, 'show']);
+
+// Auth
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index']);
