@@ -4,7 +4,7 @@
 <h1 class="text-center mt-5 mb-3">Register</h1>
 <div class="container d-flex justify-content-center align-items-center">
     <div class="col-lg-4">
-<form action="/login">
+<form action="{{ route('register')}}">
     @csrf
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
@@ -26,7 +26,7 @@
         <button type="submit" class="btn btn-primary">Register</button>
     </div>
   </form>
-  <p class="text-center mt-4">Already have an account?<small><a href="/login">Login</a></small> </p>
+  <p class="text-center mt-4">Already have an account?<small><a href="{{ route('login') }}">Login</a></small> </p>
 </div>
 </div>
 @endsection

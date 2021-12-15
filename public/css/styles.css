@@ -63,7 +63,7 @@ nav ul li a{
 /* Large */
 @media only screen and (max-width: 992px){
     img{
-        width: 600px;
+        width: 400px;
     }
 }
 

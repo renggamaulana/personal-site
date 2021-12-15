@@ -29,9 +29,9 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/blogs', [BlogController::class, 'index']);
-Route::get('/blog', [BlogController::class, 'show']);
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog/{blog:slug}', [BlogController::class, 'show']);
 
 // Auth
-Route::get('/login', [LoginController::class, 'index']);
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
