@@ -1,7 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container about mb-5">
+<section id="about">
+<div class="container mb-5 d-flex justify-content-center align-items-center">
+    <div class="col-lg-8">
 <h1>Belajar memaknai hidup</h1>
 <h2>Selalu ada pelajaran yang bisa diambil dari setiap peristiwa</h2>
 <small>Diperbarui Selasa, 14 Desember 2021</small>
@@ -14,6 +16,7 @@
     <li><a href="#hobi">Hobi</a></li>
     <li><a href="#kontak">Kontak</a></li>
 </ul>
+
 <p>Memperkenalkan diri hanya dapat dilakukan oleh orang yang sudah mengenal dirinya sendiri lebih dahulu. Jadi ini bukanlah perkenalan, ini hanya catatan bagaimana aku mencoba mengenali diriku.</p>
 <p>Aku menamakan diriku sendiri <strong>Ren</strong>. Hingga saat ini, aku masih berada dalam tubuh fana manusia</p>
 <hr>
@@ -31,7 +34,9 @@
 <h1 id="hobi">Hobi</h1>
 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius rem enim veritatis debitis cupiditate ad necessitatibus aperiam totam dolorum magnam quasi consectetur beatae esse, tempore nisi laboriosam harum fuga commodi ut ipsa veniam possimus et qui assumenda? Unde, earum consequatur.</p>
 <h1 id="kontak">Kontak</h1>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque cupiditate odit fuga suscipit possimus minima accusamus quisquam accusantium mollitia illo facilis ad quibusdam laboriosam, maxime quia ratione debitis tenetur praesentium?
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque cupiditate odit fuga suscipit possimus minima accusamus quisquam accusantium mollitia illo facilis ad quibusdam laboriosam, maxime quia ratione debitis tenetur praesentium?</p>
 </div>
+</div>
+</section>
 <div class="progress-bar"></div>
 @endsection
