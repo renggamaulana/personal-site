@@ -21,6 +21,8 @@
     @yield('content')
     </div>
 
+    @include('components.footer')
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

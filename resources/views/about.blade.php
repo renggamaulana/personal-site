@@ -9,12 +9,12 @@
 <small>Diperbarui Selasa, 14 Desember 2021</small>
 <hr>
 <ul>
-    <li><a href="#blog">Blog ini</a></li>
-    <li><a href="#manusia">Manusia</a></li>
-    <li><a href="#teknologi">Teknologi</a></li>
-    <li><a href="#prinsip">Prinsip hidup saat ini</a></li>
-    <li><a href="#hobi">Hobi</a></li>
-    <li><a href="#kontak">Kontak</a></li>
+    <li><a class="blog-link" href="#blog">Blog ini</a></li>
+    <li><a class="blog-link" href="#manusia">Manusia</a></li>
+    <li><a class="blog-link" href="#teknologi">Teknologi</a></li>
+    <li><a class="blog-link" href="#prinsip">Prinsip hidup saat ini</a></li>
+    <li><a class="blog-link" href="#hobi">Hobi</a></li>
+    <li><a class="blog-link" href="#kontak">Kontak</a></li>
 </ul>
 
 <p>Memperkenalkan diri hanya dapat dilakukan oleh orang yang sudah mengenal dirinya sendiri lebih dahulu. Jadi ini bukanlah perkenalan, ini hanya catatan bagaimana aku mencoba mengenali diriku.</p>
