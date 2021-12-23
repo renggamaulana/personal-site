@@ -2,19 +2,19 @@
 
 @section('content')
 <section id="about">
-<div class="container mb-5 d-flex justify-content-center align-items-center">
+<div class="container my-5 d-flex justify-content-center align-items-center">
     <div class="col-lg-8">
 <h1>Belajar memaknai hidup</h1>
 <h2>Selalu ada pelajaran yang bisa diambil dari setiap peristiwa</h2>
 <small>Diperbarui Selasa, 14 Desember 2021</small>
 <hr>
 <ul>
-    <li><a class="blog-link" href="#blog">Blog ini</a></li>
-    <li><a class="blog-link" href="#manusia">Manusia</a></li>
-    <li><a class="blog-link" href="#teknologi">Teknologi</a></li>
-    <li><a class="blog-link" href="#prinsip">Prinsip hidup saat ini</a></li>
-    <li><a class="blog-link" href="#hobi">Hobi</a></li>
-    <li><a class="blog-link" href="#kontak">Kontak</a></li>
+    <li><a class="blog-link posts" href="#blog">Blog ini</a></li>
+    <li><a class="blog-link posts" href="#manusia">Manusia</a></li>
+    <li><a class="blog-link posts" href="#teknologi">Teknologi</a></li>
+    <li><a class="blog-link posts" href="#prinsip">Prinsip hidup saat ini</a></li>
+    <li><a class="blog-link posts" href="#hobi">Hobi</a></li>
+    <li><a class="blog-link posts" href="#kontak">Kontak</a></li>
 </ul>
 
 <p>Memperkenalkan diri hanya dapat dilakukan oleh orang yang sudah mengenal dirinya sendiri lebih dahulu. Jadi ini bukanlah perkenalan, ini hanya catatan bagaimana aku mencoba mengenali diriku.</p>

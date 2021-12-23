@@ -7,11 +7,25 @@ h1,h2,h3{
 }
 
 .navbar {
-    background: linear-gradient(to right, khaki, lightblue);
+    background: linear-gradient(to right,#516BEB ,#22577E );
     font-family: 'Fira Sans', sans-serif;
 }
 nav ul li a{
     font-size: 1.2rem;
+}
+.banner{
+    background: linear-gradient(to right,#516BEB ,#22577E );
+    color: rgb(255, 253, 253);
+    padding: 4rem;
+    margin: 0;
+}
+.banner-title {
+    font-size: 3.5rem;
+    color: rgb(255, 253, 253);
+}
+.banner-content {
+    font-size: 2.5rem;
+    color: rgb(255, 253, 253);
 }
 .post-title {
     font-size: 2.5rem;
@@ -26,7 +40,7 @@ nav ul li a{
     top: 0;
     left: 0;
     height: 8px;
-    background: linear-gradient(to right, khaki, lightblue);
+    background: linear-gradient(to right,#516BEB ,#22577E );
     width: 0%;
     z-index: 100;
     transition: width 0.2s ease-out;
@@ -51,7 +65,13 @@ nav ul li a{
   }
 .blog-link {
     text-decoration:none;
-    color:#333;
+    color:rgb(199, 199, 199);
+    display: inline-block;
+    position: relative;
+}
+.blog-link.posts {
+    text-decoration:none;
+    color:rgb(49, 49, 49);
     display: inline-block;
     position: relative;
 }
@@ -63,23 +83,37 @@ nav ul li a{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #333;
+    background-color: rgb(235, 235, 235);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.blog-link.posts:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(15, 15, 15);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 .blog-link:hover:after{
     transform: scaleX(1);
     transform-origin: bottom left;
-    color: #333;
 } 
 .blog-link:hover {
-    color: #333;
+    color: rgb(243, 243, 243);
+}
+.blog-link.posts:hover {
+    color: rgb(41, 41, 41);
 }
   /* a .blog-link:hover {
       text-decoration: underline;
   } */
 footer {
-    background: linear-gradient(to right, khaki, lightblue);
+    background: linear-gradient(to right,#516BEB ,#22577E );
     
   }
   footer ul {
@@ -89,12 +123,12 @@ footer {
   }
   footer ul li a{
       text-decoration:none ;
-      color: whitesmoke;
       font-family: 'Fira Sans';
       padding-right: 20px;
       padding-top: 20px;
       padding-bottom: 20px;
   }
+
 
 /* X-Small */
   @media only screen and (max-width: 576px){

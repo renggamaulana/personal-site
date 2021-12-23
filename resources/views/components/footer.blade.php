@@ -1,4 +1,4 @@
-<footer >
+<footer class="navbar-dark">
     <ul class="container">
         <li><a class="blog-link" href="/">Home</a></li>
         <li><a class="blog-link" href="terms">Terms</a></li>

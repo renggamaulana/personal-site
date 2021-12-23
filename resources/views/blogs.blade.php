@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="container d-flex justify-content-center align-items-center">
+<div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="col-lg-10">
         @foreach($blogs as $blog)
         <article class="mb-5">
-            <h2><a href="/blog/{{ $blog->slug }}" class="blog-link">{{ $blog->title }}</a></h2>
+            <h2><a href="/blog/{{ $blog->slug }}" class="blog-link posts">{{ $blog->title }}</a></h2>
             <img src="https://source.unsplash.com/300x200?/{{ $blog->category }}" alt="img" class="my-2">
             <div class="col-lg-8 col-xs-12 mt-4">
                 <p>{{ $blog->excerpt}}</p>
