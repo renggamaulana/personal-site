@@ -17,7 +17,11 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </form>
-  <p class="text-center mt-4">Not registered yet? <small><a href="{{ route('register') }}">register</a> Now!</small> </p>
+  <p class="text-center mt-3">Not registered yet? <small><a href="{{ route('register') }}">register</a> Now!</small> </p>
 </div>
 </div>
+<br>
+<br>
+<br>
+<br>
 @endsection

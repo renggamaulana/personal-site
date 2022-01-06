@@ -11,7 +11,7 @@
 <div class="container my-5">
     <h2 class="mb-3">📚 Helpful resources to get you started!</h2>
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -21,7 +21,7 @@
                 </div>
               </div>   
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -31,7 +31,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -44,7 +44,7 @@
     </div>
     <div class="row my-5">
         <h2 class="mb-3">✒️ Some of our recent posts:</h2> 
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -54,7 +54,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
@@ -64,7 +64,7 @@
                 </div>
               </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">

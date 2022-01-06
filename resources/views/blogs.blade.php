@@ -15,12 +15,12 @@
         </article>
         @endforeach
     </div>
-    <div class="col-lg-2 sidebar-topics">
+    {{-- <div class="col-lg-2 sidebar-topics">
             <h6>Related topics</h6>
             <a href="#">Technology</a>
             <a href="#">Business</a>
             <a href="#">Productivity</a>
-    </div>
+    </div> --}}
     </div>
 </div>
 

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Blog;
 
-class BlogController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +13,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blogs', [
-            'title' => 'Blog',
-            'blogs' => Blog::all()
-        ]);
+        //
     }
 
     /**
@@ -47,12 +43,9 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($id)
     {
-        return view('blog', [
-            "title" => "Blog",
-            "blog" => $blog
-        ]);
+        //
     }
 
     /**
