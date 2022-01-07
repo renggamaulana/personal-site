@@ -14,7 +14,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blogs', [
+        return view('blogs.index', [
             'title' => 'Blog',
             'blogs' => Blog::all()
         ]);
@@ -27,7 +27,9 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blogs.create', [
+            'title' => 'Create Post'
+        ]);
     }
 
     /**
@@ -38,7 +40,16 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $blog = new Blog;
+        $blog->title = $request->title;
+        $blog->slug = $request->slug;
+        $blog->body = $request->body;
+        $blog->category = $request->category;
+
+        $blog->save();
+        // return redirect('blogs');
+        return redirect('blogs/create')->with('status', 'Post has successfully been added');
     }
 
     /**
@@ -49,7 +60,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        return view('blog', [
+        return view('blogs.show', [
             "title" => "Blog",
             "blog" => $blog
         ]);

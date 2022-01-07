@@ -7,13 +7,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link blog-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
+            <a class="nav-link blog-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="{{ url('/') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link blog-link {{ Request::is('blog') ? 'active' : '' }}" href="/blog">Blog</a>
+            <a class="nav-link blog-link {{ Request::is('blogs') ? 'active' : '' }}" href="{{ url('blogs') }}">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link blog-link {{ Request::is('about') ? 'active' : '' }}" href="/about">About</a>
+            <a class="nav-link blog-link {{ Request::is('about') ? 'active' : '' }}" href="{{ url('about') }}">About</a>
           </li>
         </ul>
       </div>

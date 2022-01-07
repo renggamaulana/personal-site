@@ -129,6 +129,19 @@ footer {
       padding-bottom: 20px;
   }
 
+  
+.to-top a{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right,#516BEB ,#22577E );
+    padding: 10px;
+    border-radius: 60% ;
+    position: fixed;
+    right: 10%;
+    bottom: 15%;
+    margin: -20px;
+  }
+
 
 /* X-Small */
   @media only screen and (max-width: 576px){

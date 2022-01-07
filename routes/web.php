@@ -18,20 +18,17 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('home', [
+    return view('pages.home', [
         'title' => 'Home'
     ]);
 });
 
 Route::get('/about', function () {
-    return view('about', [
-        'title' => 'About'
-    ]);
+    return view('pages.about', ['title' => 'About']);
 });
 
-Route::get('/blog', [BlogController::class, 'index']);
-Route::get('/blog/{blog:slug}', [BlogController::class, 'show']);
-
-// Auth
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
+// blogs
+Route::get('/blogs', [BlogController::class, 'index']);
+Route::get('/blogs/create', [BlogController::class, 'create']);
+Route::get('/blogs/{blog:slug}', [BlogController::class, 'show']);
+Route::post('/blogs', [BlogController::class, 'store']);
