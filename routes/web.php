@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,18 @@ Route::get('/blogs/create', [BlogController::class, 'create']);
 // wildcard blog dibawah adalah nama model dari blogs -> Blog(blog) dan :slug adalah mengambil data speseifik berdasarkan slug
 Route::get('/blogs/{blog:slug}', [BlogController::class, 'show']);
 Route::post('/blogs', [BlogController::class, 'store']);
+
+// category
+Route::get('/categories', function () {
+    return view('blogs.categories', [
+        'title' => 'Categories',
+        'categories' => Category::all()
+    ]);
+});
+Route::get('/categories/{category:slug}', function (Category $category) {
+    return view('blogs.category', [
+        'title' => $category->name,
+        'blogs' => $category->blogs,
+        'category' => $category->name
+    ]);
+});
