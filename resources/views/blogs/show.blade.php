@@ -10,7 +10,7 @@
                 <h1 class="post-title my-5">{{ $blog->title }}</h1>
                 <img src="https://source.unsplash.com/700x400?/{{ $blog->category }}" alt="img">
             <div class="post-body mt-5">
-                <p>{{ $blog->body }}</p> 
+                <p>{!! $blog->body !!}</p> 
             </div>
                 <a href="/blogs">Back to blogs</a>
             </article>

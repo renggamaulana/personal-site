@@ -30,5 +30,6 @@ Route::get('/about', function () {
 // blogs
 Route::get('/blogs', [BlogController::class, 'index']);
 Route::get('/blogs/create', [BlogController::class, 'create']);
+// wildcard blog dibawah adalah nama model dari blogs -> Blog(blog) dan :slug adalah mengambil data speseifik berdasarkan slug
 Route::get('/blogs/{blog:slug}', [BlogController::class, 'show']);
 Route::post('/blogs', [BlogController::class, 'store']);
