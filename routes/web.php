@@ -43,9 +43,8 @@ Route::get('/categories', function () {
     ]);
 });
 Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('blogs.category', [
-        'title' => $category->name,
-        'blogs' => $category->blogs,
-        'category' => $category->name
+    return view('blogs.index', [
+        'title' => "Category : $category->name",
+        'blogs' => $category->blogs->load('category')
     ]);
 });
