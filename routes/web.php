@@ -3,6 +3,8 @@
 use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Models\Category;
@@ -18,15 +20,8 @@ use App\Models\Category;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home', [
-        'title' => 'Home'
-    ]);
-});
-
-Route::get('/about', function () {
-    return view('pages.about', ['title' => 'About']);
-});
+Route::get('/', [PageController::class, 'home']);
+Route::get('/about', [PageController::class, 'about']);
 
 // blogs
 Route::get('/blogs', [BlogController::class, 'index']);
@@ -36,15 +31,4 @@ Route::get('/blogs/{blog:slug}', [BlogController::class, 'show']);
 Route::post('/blogs', [BlogController::class, 'store']);
 
 // category
-Route::get('/categories', function () {
-    return view('blogs.categories', [
-        'title' => 'Categories',
-        'categories' => Category::all()
-    ]);
-});
-Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('blogs.index', [
-        'title' => "Category : $category->name",
-        'blogs' => $category->blogs->load('category')
-    ]);
-});
+Route::resource('/categories', CategoryController::class);

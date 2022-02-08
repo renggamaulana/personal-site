@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Blog;
 use App\Models\Category;
 
-class BlogController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blogs.index', [
-            'title' => 'All Blogs',
-            'blogs' => Blog::all(),
+        return view('blogs.categories.index', [
+            'title' => 'All Categories',
             'categories' => Category::all()
         ]);
     }
@@ -29,10 +27,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blogs.create', [
-            'title' => 'Create Post',
-            'categories' => Category::all()
-        ]);
+        //
     }
 
     /**
@@ -43,17 +38,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-
-        $blog = new Blog;
-        $blog->title = $request->title;
-        $blog->slug = $request->slug;
-        $blog->excerpt = $request->excerpt;
-        $blog->body = $request->body;
-        $blog->category_id = $request->category_id;
-
-        $blog->save();
-        // return redirect('blogs');
-        return redirect('blogs/create')->with('status', 'Post has successfully been added');
+        //
     }
 
     /**
@@ -62,12 +47,16 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show(Category $category)
     {
-        return view('blogs.show', [
-            "title" => "Blog",
-            "blog" => $blog
-        ]);
+        $category = Category::all();
+        return view(
+            'blogs.categories.show',
+            [
+                'title' => "Category $category->name",
+
+            ]
+        );
     }
 
     /**

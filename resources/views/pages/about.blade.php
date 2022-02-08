@@ -3,7 +3,7 @@
 @section('content')
 <section id="about">
 <div class="container my-5 d-flex justify-content-center align-items-center">
-    <div class="col-lg-8">
+    <div class="col-lg-12">
 <h1>Belajar memaknai hidup</h1>
 <h2>Selalu ada pelajaran yang bisa diambil dari setiap peristiwa</h2>
 <small>Diperbarui Selasa, 14 Desember 2021</small>
@@ -39,5 +39,5 @@
 </div>
 </section>
 <div class="progress-bar"></div>
-<div class="to-top"><a href="#about"><i class="bi bi-chevron-double-up"></i></a></div>
+<div class="to-top"><a href="#top"><i class="bi bi-chevron-double-up"></i></a></div>
 @endsection

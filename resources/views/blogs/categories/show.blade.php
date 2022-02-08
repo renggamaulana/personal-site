@@ -16,25 +16,23 @@
         </article>
         @endforeach
     </div>
-    <aside>
+    <div class="col-lg-2 sidebar-topics">
             <h6>Related topics</h6>
             <ul>
                 @foreach ($categories as $category )
-                    <li><a href="/categories/{{ $category->slug }}">{{ $category->name }}</a></li>  
+                    <li><a href="blogs/categories/{{ $category->slug }}">{{ $category->name }}</a></li>  
                 @endforeach
             </ul>
-    </aside>
+    </div>
 </div>
 @else
 <div class="container">
     <div class="row" style="margin-top:">
         <div class="col">
-            <p class="text-center mt-5 mb-5 fs-1">No post found.</p>
+            <p class="text-center mt-5 mb-5 fs-1">No category found.</p>
         </div>
     </div>
 </div>
-{{-- <br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br> --}}
 @endif
 
 @endsection
