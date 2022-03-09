@@ -30,7 +30,13 @@
     <div class="row" style="margin-top:">
         <div class="col">
             <p class="text-center mt-5 mb-5 fs-1">No post found.</p>
-        </div>
+            <div class="d-flex justify-content-center my-5">
+                <a class="badge bg-success text-decoration-none" 
+                onMouseOver="this.style.color='rgb(226, 231, 231)'"
+                onMouseOut="this.style.color='white'"
+                href="blogs/create">Create a blog</a>
+            </div>
+        </div> 
     </div>
 </div>
 {{-- <br><br><br><br><br><br><br><br>
@@ -39,3 +45,9 @@
 
 @endsection
 
+<style>
+
+    h1 {
+        color: rgb(226, 231, 231)
+    }
+</style>
