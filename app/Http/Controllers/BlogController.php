@@ -44,6 +44,14 @@ class BlogController extends Controller
     public function store(Request $request)
     {
 
+        $this->validate($request, [
+            'title' => 'required',
+            'slug' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
+
+        
         $blog = new Blog;
         $blog->title = $request->title;
         $blog->slug = $request->slug;

@@ -6,9 +6,17 @@
     <div class="row my-4">
         <div class="col-md-8">
             <h2 class="mb-3">Create a new post</h2>
-            @if(session('status'))
+            @if(session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('status') }}
+                {{ session('success') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            @endif
+            @if(session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('error') }}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -18,19 +26,34 @@
                 @csrf 
                 <div class="form-group mb-3">
                   <label for="title">Title</label>
-                  <input type="text" class="form-control" id="title" name="title" placeholder="title here">
+                  <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="title here" value="{{ old('title') }}">
+                  @error('title')
+                    <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                    </span>
+                  @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label for="slug">Slug</label>
-                    <input type="text" class="form-control" id="slug" name="slug" placeholder="slug here">
+                    <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" placeholder="slug here" value="{{ old('slug') }}">
+                    @error('slug')
+                      <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
                   </div>
                 <div class="form-group mb-3">
                   <label for="body">Body</label>
-                  <textarea class="form-control" id="body" name="body" rows="4" cols="200" placeholder="Content here..."></textarea>
+                  <textarea class="form-control @error('body') is-invalid @enderror" id="body" name="body" rows="4" cols="200" placeholder="Content here..." value="{{ old('body') }}"></textarea>
+                  @error('body')
+                      <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                      </span>
+                    @enderror
                 </div>
                 <div class="form-group mb-3">
                   <label for="excerpt">Excerpt</label>
-                  <textarea class="form-control" id="excerpt" name="excerpt" rows="4" cols="200" placeholder="Content here..."></textarea>
+                  <textarea disabled class="form-control" id="excerpt" name="excerpt" rows="4" cols="200" placeholder="Content here..."></textarea>
                 </div>
                 <div class="form-group">
                     <label for="category_id">Choose a Category</label>

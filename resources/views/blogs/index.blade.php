@@ -44,10 +44,3 @@
 @endif
 
 @endsection
-
-<style>
-
-    h1 {
-        color: rgb(226, 231, 231)
-    }
-</style>
