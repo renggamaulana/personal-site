@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-@if ($blogs->count())
+@if ($blogs->count() != 0)
 <div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="col-lg-10">
         <h1 class="mb-5">{{ $title }}</h1>
@@ -16,14 +16,6 @@
         </article>
         @endforeach
     </div>
-    <aside>
-            <h6>Related topics</h6>
-            <ul>
-                @foreach ($categories as $category )
-                    <li><a href="/categories/{{ $category->slug }}">{{ $category->name }}</a></li>  
-                @endforeach
-            </ul>
-    </aside>
 </div>
 @else
 <div class="container">
@@ -39,8 +31,9 @@
         </div> 
     </div>
 </div>
-{{-- <br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br> --}}
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 @endif
 
 @endsection
+
