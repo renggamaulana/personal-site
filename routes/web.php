@@ -5,8 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Web\Auth\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\Web\Application\Admin\AdminController;
 use App\Models\Category;
 
 /*
@@ -32,9 +33,7 @@ Route::get('/register', function() {
 
 Route::middleware('customAuth')->group(function(){ 
     Route::prefix('admin')->name('admin.')->group(function() {
-        Route::get('dashboard', function() {
-            dd('dashboard page');
-        });
+        Route::get('dashboard', [AdminController::class, 'dashboard']);
     });
 });
 
