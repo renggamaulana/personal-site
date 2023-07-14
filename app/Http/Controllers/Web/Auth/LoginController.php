@@ -24,7 +24,7 @@ class LoginController extends Controller
             return redirect()->intended('/admin/dashboard');
         }
 
-        return redirect()->back()->withErrors(['message' => 'Invalid credentials']);
+        return redirect()->back()->withErrors(['message' => 'Invalid credentials, Please try again!']);
     }
 
     public function logout()
